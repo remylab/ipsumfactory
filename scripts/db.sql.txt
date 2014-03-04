@@ -1,0 +1,11 @@
+/* aide memoire postgresql
+
+psql -U postgres
+psql -U ipsumadmin -d ipsumfactory
+
+## activate evolutions
+application.conf => ebean.default="models.*"
+
+*/
+drop database ipsumfactory; drop user ipsumadmin;  
+create database ipsumfactory; create user ipsumadmin with password 'test'; grant all privileges on database ipsumfactory to ipsumadmin;
