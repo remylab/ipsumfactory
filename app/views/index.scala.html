@@ -1,7 +1,11 @@
-@(message: String)
+@import tools._
+@import layouts._
+@import tags._
 
-@main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+@head = {}
 
+@main("Home page")(head) {
+    <h1>Hello ipsum factory</h1>
 }
+
