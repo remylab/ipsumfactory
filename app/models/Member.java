@@ -10,6 +10,7 @@ import play.data.validation.Constraints.Email;
 import play.data.validation.Constraints.MinLength;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import tools.DateUtil;
 import tools.StringUtil;
 
 @Entity
@@ -36,7 +37,7 @@ public class Member extends Model {
         this.active = false;
         this.confirmationToken = RandomStringUtils.randomAlphanumeric(40);
 
-        // this.creationTime = DateUtil.getTimeNow();
+        this.creationTime = DateUtil.getTimeNow();
     }
 
     public static Member create(String email, String password) {

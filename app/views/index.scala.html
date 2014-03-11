@@ -1,3 +1,6 @@
+@(member: Member)
+
+
 @import tools._
 @import layouts._
 @import tags._
@@ -6,6 +9,12 @@
 @head = {}
 
 @main("Home page")(head) {
-    <h1>Hello ipsum factory</h1>
+    <h1>IpsumFactory</h1>
+    
+    @if(member != null ) {
+        hello @member.email
+    } else {
+        New user ? login or register
+    }
 }
 
